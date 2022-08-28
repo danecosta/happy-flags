@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <h1>{{title}} Flag</h1>
+    </div>
+    <form id="formFlag">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="name">Name</label>
+            </div>
+            <div class="col-md-10">
+                <input id="name" name="name" type="text" class="form-control" [(ngModel)]="flag.name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="app">App</label>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" name="app" id="app" [(ngModel)]="flag.app">
+                    <option selected>Select</option>
+                    <option value="1">Anjo de Bolso</option>
+                    <option value="2">Vote 2018</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="env">Environment</label>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" name="env" id="env" [(ngModel)]="flag.environment">
+                    <option selected>Select</option>
+                    <option value="DEV">DEV</option>
+                    <option value="INT">INT</option>
+                    <option value="TEST">TEST</option>
+                    <option value="PROD">PROD</option>
+                </select>
+            </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="button" class="btn btn-light me-md-2" routerLink="/flag/all">Back</button>
+            <button type="submit" class="btn btn-success" (click)="saveFlag()">Save</button>
+        </div>
+    </form>
+</div>
